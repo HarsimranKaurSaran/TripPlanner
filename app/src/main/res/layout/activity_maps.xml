@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/white_border">
+
+        <AutoCompleteTextView
+            android:id="@+id/search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Where do you want to go?"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/search_view"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000"
+            android:imeOptions="actionSearch"/>
+
+        <ImageView
+            android:id="@+id/search_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_magnify"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativetwo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative"
+        android:elevation="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp">
+    <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        tools:context=".activities.MainActivity$MapsActivity" />
+
+        <ImageView
+            android:id="@+id/placepicker"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_picker"/>
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativethree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            android:layout_below="@+id/relativetwo">
+            <TextView
+                android:id="@+id/placename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:textColor="#ffffff"/>
+            <TextView
+                android:id="@+id/placeaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/placename"/>
+            <TextView
+                android:id="@+id/phoneno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/placeaddress"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:textSize="10sp"/>
+            <TextView
+                android:id="@+id/web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/phoneno"
+                android:layout_marginTop="8dp"
+                android:textColor="#ffffff"
+                android:textSize="10sp"/>
+        </RelativeLayout>
+</RelativeLayout>
+</ScrollView>
